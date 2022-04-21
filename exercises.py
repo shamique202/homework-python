@@ -34,9 +34,32 @@ print(f"I was born in {home_town['city']}, {home_town['state']} and theres a pop
 # "city = Arcadia"
 # "state = California"
 # "population = 58000"
-
-
-
-
+for key, val in home_town.items():
+  print( f"{key} = {val}" )
 
 # EXERCISE 6
+# Create an empty list named cohort
+# Using a for loop, add one dictionary to the cohort list for each student name. Each dictionary should have this shape:
+# Iterate over cohort printing out each element 
+cohort = []
+for index, student in enumerate(students):
+  cohort.append({
+    'student': student,
+    'fav_food': foods[index]
+  })
+for student in cohort:
+  print(student)
+
+# EXERCISE 7
+# Using the list of students and list comprehension, assign to a variable named awesome_students a new list containing strings similar to this:
+# ["Tina is awesome!", "Fred is awesome!", "Wilma is awesome!"]
+# Iterate over awesome_students printing out each string.
+awesome_students = [f"{name} is so incredibly passionate about software engineering!" for name in students]
+for student in awesome_students:
+  print(student)
+
+
+# EXERCISE 8 
+# Using the tuple foods and list comprehension within a for loop, print each food string that contains the letter a.
+a_in_foods = [food for food in foods if 'a' in food]
+print(a_in_foods)
